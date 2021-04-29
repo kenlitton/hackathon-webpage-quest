@@ -41,32 +41,62 @@ class Willie {
 
 }
 */
+
     // const body = document.querySelector('body'); ///<<<
     // const = document.querySelector('#board'); ///<<<
     
     //const head = new Head(board);
     //const apple = new Apple(board);
 document.addEventListener('keydown', (e) => {
-      if (e.code === 'ArrowLeft' && willie.currentDirection !== 'right') {
+      if (e.code === 'ArrowLeft') {
         // console.log('clicked left')
         willie.currentDirection = 'left';
       }
-      if (e.code === 'ArrowRight' && willie.currentDirection !== 'left') {
+      if (e.code === 'ArrowRight') {
         // console.log('clicked right')
         willie.currentDirection = 'right';
       }
-      if (e.code === 'ArrowUp' && willie.currentDirection !== 'down') {
+      if (e.code === 'ArrowUp') {
         // console.log('clicked up')
         willie.currentDirection = 'up';
       }
-      if (e.code === 'ArrowDown' && willie.currentDirection !== 'up') {
+      if (e.code === 'ArrowDown') {
         // console.log('clicked down')
         willie.currentDirection = 'down';
       }
-      if (e.code === 'KeyP') {
+
+      if (e.code === 'KeyG') {
         willie.SPEED = 10000;
+        alert('Did you know that I was raised during the Great Depression and by my grandparents');
+      }
+      if (e.code === 'KeyA') {
+        willie.SPEED = 10000;
+        alert('Did you know that I served in the Air Force?');
+      }
+      if (e.code === 'KeyS') {
+        willie.SPEED = 10000;
+        document.getElementById("Activism").scrollIntoView();
+        setTimeout(console.log('hello'), 1000);
+        alert('Did you know, along with Neil Young and John Mellencamp, I set up Farm Aid in 1985 to assist and increase awareness of the importance of family farms?');
       }
       if (e.code === 'KeyR') {
+        clearTimeout(willie.timeoutID);
         willie.SPEED = 50;
+        willie.move();
       }
+      // if (e.code === 'KeyP') {
+      //   willie.SPEED = 10000;
+      // }
+      // else if (e.code === 'KeyR') {
+      //   willie.SPEED = 50;
+      // }
     });
+
+    //a key press that would disable the mobility of the user --> clearTimeout(timeoutID)
+    //placing movement else if statement 
+    //the original if is the pause feature
+
+    //with key press increment the number of pixels moved with each key press
+
+
+

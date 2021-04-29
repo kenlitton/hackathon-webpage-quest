@@ -15,8 +15,8 @@ class Head {
       this.node.style.top = '0px';
       this.node.style.left = '0px';
 
-      this.node.style.width = "100px";
-      this.node.style.height = "100px";
+      this.node.style.width = "10px";
+      this.node.style.height = "10px";
       this.node.style.position = "absolute";
   
       // const score = document.getElementById('score');
@@ -27,7 +27,9 @@ class Head {
       // this.headPosition =[];    
   
       //binds this move method to the contructed head
-      setTimeout(this.move.bind(this), this.SPEED);
+      this.timeoutID = setTimeout(this.move.bind(this), this.SPEED);
+      console.log(this.timeoutID);
+      // console.log(timeoutID()); // timeoutID is not a function
   
     }
 
@@ -53,20 +55,20 @@ class Head {
       // console.log("this is Body.moveBody in the headjs file", Body);
       // Movement for the snake HEAD
       if (direction === 'right') {
-        head.style.left = `${(leftPosition += 1)}px`;
+        head.style.left = `${(leftPosition += 3)}px`;
         // console.log('pressed right');
       }
       if (direction === 'left') {
-        head.style.left = `${(leftPosition -= 1)}px`;
+        head.style.left = `${(leftPosition -= 3)}px`;
         // console.log('pressed left');
 
       }
       if (direction === 'up') {
-        head.style.top = `${(topPosition -= 1)}px`;
+        head.style.top = `${(topPosition -= 3)}px`;
         // console.log('pressed up');
       }
       if (direction === 'down') {
-        head.style.top = `${(topPosition += 1)}px`;
+        head.style.top = `${(topPosition += 3)}px`;
         // console.log('pressed down');
       }
       //move the body by creating a new node where head just was and popping the node of the tail
@@ -79,3 +81,5 @@ class Head {
     //     this.node = document.createElement('img');
     //     this.node.setAttribute('id', 'apple');
     //     this.node.setAttribute('src', 'hackathon/assets/{_nameOfImage}');
+
+    // console.log(timeoutID) //HO HO HO MERRRY CODEMIST
