@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Willie Nelson",
+  "description": "An educational chrome extension to help consumers learn about famous individuals",
+  "version": "1.0",
+  "content_scripts": [
+    {
+      "matches": ["https://en.wikipedia.org/*"],
+      "js": ["./Schloop.js", "./main.js"]
+    }
+  ]
+}

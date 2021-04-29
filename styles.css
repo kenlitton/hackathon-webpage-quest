@@ -1,0 +1,18 @@
+#head {
+    /* background: black; */
+    height: 50px;
+    width: 50px;
+    /* max-height: 150%; */
+    /* overflow:auto;   */
+    /* background-color: green; */
+    position: absolute;
+    z-index: 90000; 
+  }
+/*
+class character{
+    this.node.setAttribute('src', 'src/assets/nelson-willie-rect.jpeg');
+    height:auto;
+    
+     
+}
+*/
